@@ -27,8 +27,8 @@ const Profile = () => {
                   <AvatarFallback className="text-2xl bg-primary text-primary-foreground">AM</AvatarFallback>
                 </Avatar>
                 <div className="flex-1 text-center md:text-left">
-                  <h1 className="text-2xl font-bold text-foreground mb-1">Alex Martin</h1>
-                  <p className="text-muted-foreground mb-2">alex.martin@email.com</p>
+                  <h1 className="text-2xl font-bold text-foreground mb-1">Evan Durand Arranz Herranz</h1>
+                  <p className="text-muted-foreground mb-2">evan.durand-arranz-herranz@epitech.eu</p>
                   <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                     <Badge className="bg-primary text-primary-foreground">Rang #462</Badge>
                     <Badge variant="outline">3,420 pts</Badge>
@@ -48,16 +48,16 @@ const Profile = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nom complet</Label>
-                  <Input id="name" defaultValue="Alex Martin" />
+                  <Input id="name" defaultValue="" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="username">Pseudo</Label>
-                  <Input id="username" defaultValue="alexm_quiz" />
+                  <Input id="username" defaultValue="" />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" defaultValue="alex.martin@email.com" />
+                <Input id="email" type="email" defaultValue="" />
               </div>
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
                 Sauvegarder les modifications
@@ -78,7 +78,7 @@ const Profile = () => {
               <div className="space-y-2">
                 <Label htmlFor="password">Changer le mot de passe</Label>
                 <Input id="password" type="password" placeholder="Nouveau mot de passe" />
-                <Button variant="outline" className="mt-2">Mettre à jour</Button>
+                <Button variant="outline" className="mt-2 hover:bg-muted">Mettre à jour</Button>
               </div>
               
               <Separator />
@@ -93,30 +93,7 @@ const Profile = () => {
 
               <Separator />
 
-              <div className="space-y-3">
-                <Label className="flex items-center gap-2">
-                  <Smartphone className="h-4 w-4" />
-                  Appareils connectés
-                </Label>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between p-3 rounded-lg border">
-                    <div>
-                      <p className="font-medium">Chrome sur Windows</p>
-                      <p className="text-sm text-muted-foreground">Actif maintenant</p>
-                    </div>
-                    <Badge variant="outline" className="text-success border-success">Actif</Badge>
-                  </div>
-                  <div className="flex items-center justify-between p-3 rounded-lg border">
-                    <div>
-                      <p className="font-medium">Safari sur iPhone</p>
-                      <p className="text-sm text-muted-foreground">Il y a 2 jours</p>
-                    </div>
-                    <Button variant="ghost" size="sm" className="text-destructive hover:text-destructive">
-                      Déconnecter
-                    </Button>
-                  </div>
-                </div>
-              </div>
+
             </CardContent>
           </Card>
 
@@ -162,10 +139,10 @@ const Profile = () => {
                   <Badge variant="outline" className="cursor-pointer hover:bg-primary hover:text-primary-foreground">
                     Histoire
                   </Badge>
-                  <Badge className="bg-primary text-primary-foreground">
+                  <Badge variant="outline" className="cursor-pointer hover:bg-primary hover:text-primary-foreground">
                     Sciences
                   </Badge>
-                  <Badge className="bg-primary text-primary-foreground">
+                  <Badge variant="outline" className="cursor-pointer hover:bg-primary hover:text-primary-foreground">
                     Géographie
                   </Badge>
                   <Badge variant="outline" className="cursor-pointer hover:bg-primary hover:text-primary-foreground">
@@ -183,72 +160,6 @@ const Profile = () => {
                   <p className="text-sm text-muted-foreground">Questions avec propositions ambiguës (15-20%)</p>
                 </div>
                 <Switch defaultChecked />
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Notifications */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Bell className="h-5 w-5" />
-                Notifications
-              </CardTitle>
-              <CardDescription>Gérez vos préférences de notification</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label>Notifications par email</Label>
-                  <p className="text-sm text-muted-foreground">Recevez les mises à jour par email</p>
-                </div>
-                <Switch defaultChecked />
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label>Notifications push</Label>
-                  <p className="text-sm text-muted-foreground">Alertes sur votre appareil</p>
-                </div>
-                <Switch />
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Privacy */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Eye className="h-5 w-5" />
-                Confidentialité
-              </CardTitle>
-              <CardDescription>Contrôlez la visibilité de votre profil</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label>Visibilité du profil</Label>
-                <Select defaultValue="friends">
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="public">Public</SelectItem>
-                    <SelectItem value="friends">Amis uniquement</SelectItem>
-                    <SelectItem value="private">Privé</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label>Visibilité du rang</Label>
-                <Select defaultValue="public">
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="public">Visible par tous</SelectItem>
-                    <SelectItem value="friends">Amis uniquement</SelectItem>
-                    <SelectItem value="hidden">Masqué</SelectItem>
-                  </SelectContent>
-                </Select>
               </div>
             </CardContent>
           </Card>

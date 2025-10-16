@@ -18,7 +18,7 @@ const themes = [
   { id: "geography", name: "Géographie", icon: Globe },
   { id: "art", name: "Art & Culture", icon: Palette },
   { id: "technology", name: "Technologie", icon: Cpu },
-  { id: "random", name: "🎲 Aléatoire", icon: Dices },
+  { id: "random", name: "Aléatoire", icon: Dices },
 ];
 
 const difficulties = [

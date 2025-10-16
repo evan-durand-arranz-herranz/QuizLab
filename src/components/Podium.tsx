@@ -10,9 +10,9 @@ interface PodiumPlayer {
 }
 
 const podiumData: PodiumPlayer[] = [
-  { rank: 2, name: "Marie L.", score: 18150 },
-  { rank: 1, name: "Alex M.", score: 19820 },
-  { rank: 3, name: "Thomas K.", score: 17320 },
+  { rank: 2, name: "Abdel M.", score: 18150 },
+  { rank: 1, name: "Andi B.", score: 19820 },
+  { rank: 3, name: "Fabien F.", score: 17320 },
 ];
 
 export const Podium = () => {

@@ -19,19 +19,19 @@ import { Search, UserPlus, MessageCircle, Gamepad2, UserMinus } from "lucide-rea
 
 const Friends = () => {
   const friends = [
-    { id: 1, name: "Sophie Durant", username: "sophie_d", rank: 245, score: 5680, online: true },
-    { id: 2, name: "Marc Lemoine", username: "marc_quiz", rank: 892, score: 2340, online: false },
-    { id: 3, name: "Emma Wilson", username: "emma_w", rank: 156, score: 7210, online: true },
+    { id: 1, name: "Andi Berard", username: "andi_b", rank: 245, score: 5680, online: true },
+    { id: 2, name: "Fabien Fraixanet", username: "fabien_fraixanet", rank: 892, score: 2340, online: false },
+    { id: 3, name: "Sebastien Gobi", username: "seb_goby", rank: 156, score: 7210, online: true },
   ];
 
   const pendingRequests = [
-    { id: 4, name: "Lucas Martin", username: "lucasm", rank: 534, score: 3890 },
-    { id: 5, name: "Julie Petit", username: "julie_p", rank: 321, score: 4520 },
+    { id: 4, name: "Abdel Maretheu", username: "abdel_wahid", rank: 534, score: 3890 },
+    { id: 5, name: "Baptiste Roger", username: "Roger", rank: 321, score: 4520 },
   ];
 
   const suggestions = [
-    { id: 6, name: "Thomas Bernard", username: "thomas_b", rank: 412, score: 4120, commonInterests: ["Sciences", "Histoire"] },
-    { id: 7, name: "Claire Dubois", username: "claire_d", rank: 678, score: 3210, commonInterests: ["Géographie", "Culture Pop"] },
+    { id: 6, name: "Marc Grioche", username: "marc_g", rank: 412, score: 4120, commonInterests: ["Sciences", "Histoire"] },
+    { id: 7, name: "Omar", username: "omar", rank: 678, score: 3210, commonInterests: ["Géographie", "Culture Pop"] },
   ];
 
   return (
@@ -124,8 +124,8 @@ const Friends = () => {
                         <Gamepad2 className="h-4 w-4 md:mr-1" />
                         <span className="hidden md:inline">Inviter</span>
                       </Button>
-                      <Button size="sm" variant="outline">
-                        <MessageCircle className="h-4 w-4 md:mr-1" />
+                      <Button size="sm" variant="outline" className="hover:bg-muted">
+                        <MessageCircle className="h-4 w-4 md:mr-1 " />
                         <span className="hidden md:inline">Message</span>
                       </Button>
                       <Button size="sm" variant="ghost" className="text-destructive hover:text-destructive hover:bg-destructive/10">

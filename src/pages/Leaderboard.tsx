@@ -8,16 +8,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Leaderboard = () => {
   const topPlayers = [
-    { rank: 1, name: "Alex M.", username: "alexm_quiz", score: 9820, trend: "+120" },
-    { rank: 2, name: "Marie L.", username: "marie_l", score: 8450, trend: "+85" },
-    { rank: 3, name: "Thomas K.", username: "thomas_k", score: 7920, trend: "+92" },
-    { rank: 4, name: "Sophie D.", username: "sophie_d", score: 7650, trend: "+78" },
-    { rank: 5, name: "Lucas M.", username: "lucas_m", score: 7340, trend: "+95" },
-    { rank: 6, name: "Emma W.", username: "emma_w", score: 7210, trend: "+63" },
-    { rank: 7, name: "Pierre B.", username: "pierre_b", score: 6980, trend: "+71" },
-    { rank: 8, name: "Julie P.", username: "julie_p", score: 6750, trend: "+88" },
-    { rank: 9, name: "Marc L.", username: "marc_l", score: 6520, trend: "+54" },
-    { rank: 10, name: "Claire D.", username: "claire_d", score: 6310, trend: "+67" },
+    { rank: 1, name: "Andi B.", username: "andi_", score: 9820 },
+    { rank: 2, name: "Abdel M.", username: "adbel_m", score: 8450 },
+    { rank: 3, name: "Fabien F.", username: "fabien_f", score: 7920 },
+    { rank: 4, name: "Seb G.", username: "seb_goby", score: 7650 },
+    { rank: 5, name: "Evan D.", username: "evan_dah", score: 7340 },
   ];
 
   const getRankIcon = (rank: number) => {
@@ -79,7 +74,6 @@ const Leaderboard = () => {
                     <h3 className="font-bold text-lg mb-1">{player.name}</h3>
                     <p className="text-sm opacity-90 mb-2">@{player.username}</p>
                     <div className="text-2xl font-bold">{player.score} pts</div>
-                    <div className="text-xs opacity-80 mt-1">{player.trend} cette semaine</div>
                   </Card>
                 ))}
               </div>
@@ -106,9 +100,6 @@ const Leaderboard = () => {
 
                     <div className="text-right">
                       <div className="text-xl font-bold text-foreground">{player.score} pts</div>
-                      <Badge variant="outline" className="text-xs mt-1 border-success text-success">
-                        {player.trend}
-                      </Badge>
                     </div>
                   </div>
                 </Card>
@@ -135,9 +126,6 @@ const Leaderboard = () => {
 
                   <div className="text-right">
                     <div className="text-xl font-bold text-foreground">3,420 pts</div>
-                    <Badge variant="outline" className="text-xs mt-1 border-success text-success">
-                      +45
-                    </Badge>
                   </div>
                 </div>
               </Card>

@@ -128,7 +128,7 @@ export const DailyChallengeCard = ({
                 <div className="flex gap-2">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="ghost" size="sm" className="flex-1 text-secondary hover:text-secondary">
+                      <Button variant="ghost" size="sm" className="flex-1 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
                         <Info className="h-4 w-4 mr-1" />
                         Règles
                       </Button>
@@ -182,7 +182,7 @@ export const DailyChallengeCard = ({
                   </Dialog>
 
                   <Button 
-                    variant="outline" 
+                    variant="ghost" 
                     size="sm" 
                     className="flex-1 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
                     onClick={onViewHistory}
